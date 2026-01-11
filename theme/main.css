@@ -334,6 +334,14 @@ section h2::after {
     transition: all 0.3s ease;
 }
 
+/* Image du tir à l'arc - affichage en entier */
+img[alt*="tir à l'arc"],
+img[src*="Tir_à_l'arc"] {
+    object-fit: contain !important;
+    background: rgba(45, 24, 16, 0.3);
+    padding: 1rem;
+}
+
 .card-with-image:hover .card-image {
     border-color: rgba(249, 115, 22, 0.6);
     box-shadow: 0 8px 24px rgba(249, 115, 22, 0.3);
