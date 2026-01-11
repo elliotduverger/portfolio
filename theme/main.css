@@ -510,3 +510,160 @@ table.card tbody tr:last-child td {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-color);
 }
+
+/* Styles pour les images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Photo de profil dans le header */
+header img,
+img[alt*="profil"],
+img[src*="profil"] {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    background: var(--gradient-1);
+    padding: 4px;
+    box-shadow: 0 8px 32px rgba(249, 115, 22, 0.4);
+    margin-bottom: 2rem;
+    animation: profileFloat 3s ease-in-out infinite;
+}
+
+@keyframes profileFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+header img:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 12px 48px rgba(249, 115, 22, 0.6);
+}
+
+/* Images dans les sections Projets */
+#projets img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    min-height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 1.5rem auto;
+    display: block;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid rgba(249, 115, 22, 0.3);
+    transition: all 0.4s ease;
+}
+
+#projets img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 48px rgba(249, 115, 22, 0.5);
+    border-color: rgba(249, 115, 22, 0.6);
+}
+
+/* Images dans la section Divers */
+#divers img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 1.5rem auto;
+    display: block;
+    box-shadow: var(--shadow-md);
+    border: 2px solid rgba(249, 115, 22, 0.25);
+    transition: all 0.3s ease;
+}
+
+#divers img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(249, 115, 22, 0.4);
+}
+
+/* Container pour centrer les images */
+.image-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Style spécifique pour l'image de tir à l'arc */
+img[alt*="tir à l'arc"],
+img[src*="Tir"] {
+    max-width: 400px;
+    border-radius: 12px;
+}
+
+/* Style spécifique pour l'image de jeux vidéo */
+img[alt*="MB"],
+img[src*="Top1MB"] {
+    max-width: 450px;
+    border-radius: 12px;
+}
+
+/* Style spécifique pour l'image de fibre optique */
+img[alt*="Fibre"],
+img[src*="fibraOptica"] {
+    max-width: 550px;
+}
+
+/* Style pour l'image du portfolio HTML */
+img[alt*="Código"],
+img[src*="portafolioWeb"] {
+    max-width: 550px;
+}
+
+/* Effet de zoom au clic sur les images (optionnel) */
+@media (hover: hover) {
+    #projets img,
+    #divers img {
+        cursor: pointer;
+    }
+}
+
+/* Responsive pour les images */
+@media (max-width: 768px) {
+    header img,
+    img[alt*="profil"],
+    img[src*="profil"] {
+        width: 150px;
+        height: 150px;
+    }
+    
+    #projets img,
+    #divers img {
+        max-width: 100%;
+        min-height: auto;
+    }
+    
+    img[alt*="tir à l'arc"],
+    img[src*="Tir"],
+    img[alt*="MB"],
+    img[src*="Top1MB"],
+    img[alt*="Fibre"],
+    img[src*="fibraOptica"],
+    img[alt*="Código"],
+    img[src*="portafolioWeb"] {
+        max-width: 100%;
+    }
+}
+
+/* Animation au chargement des images */
+img {
+    animation: fadeInImage 0.6s ease-out;
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
