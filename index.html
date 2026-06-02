@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="default">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,32 @@
     <title>Elliot Duverger</title>
 </head>
 <body>
+
+    <!-- ===== THEME SWITCHER ===== -->
+    <div class="theme-switcher" id="themeSwitcher">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Changer de thème" aria-label="Changer de thème">
+            <span class="theme-icon">🎨</span>
+        </button>
+        <div class="theme-panel" id="themePanel">
+            <p class="theme-panel-title">Thème</p>
+            <button class="theme-option" data-theme="default" title="Thème actuel – Orange sombre">
+                <span class="theme-swatch swatch-default"></span>
+                <span>Flamme</span>
+            </button>
+            <button class="theme-option" data-theme="dark" title="Thème sombre – Cyber noir">
+                <span class="theme-swatch swatch-dark"></span>
+                <span>Cyber</span>
+            </button>
+            <button class="theme-option" data-theme="light" title="Thème clair – Blanc propre">
+                <span class="theme-swatch swatch-light"></span>
+                <span>Clair</span>
+            </button>
+        </div>
+    </div>
+
     <header>
         <div class="présentation">
-            <img src="image/profil.jpg" alt="photo de profil">
+            <img src="image/profil.png" alt="photo de profil">
             <div>
                 <h1>Elliot Duverger</h1>
                 <h2>Étudiant en Réseaux et Télécommunications</h2>
@@ -21,7 +44,6 @@
                     J'ai choisi ce domaine car j'apprécie particulièrement l'informatique et les réseaux et j'ai pour but d'intégrer
                     le domaine de la cybersécurité en entreprise plus tard dans ma carrière.
                     <br><br>
-
                     Je suis principalement logique tout en étant curieux et en possédant de bonnes capacités de concentration.
                     Ceci me permet aussi de m'adapter très facilement à mon environnement et de m'améliorer au fur et à mesure.
                      C'est pour cela que je souhaite intégrer une entreprise en <strong>alternance pour les années 2026/2027</strong> dans le but de m'améliorer
@@ -31,6 +53,7 @@
             </div>
         </div>
     </header>
+
     <nav>
         <a href="#top" class="back-to-top">Informations personnelles </a>
         <div class="hamburger" onclick="toggleMenu()">
@@ -48,311 +71,367 @@
             <li><a href="#contact">Contact et CV</a></li>
         </ul>
     </nav>
+
     <main>
         <!-- info Formation -->
         <section id="formation"><br>
             <h2>FORMATION</h2><br>
-
             <div class="idforma">
                 <table class="card">
                     <thead>
-                        <tr>
-                            <th colspan="2">UNIVERSITÉ</th>
-                        </tr>
+                        <tr><th colspan="2">UNIVERSITÉ</th></tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><strong>Programme :</strong></td>
-                            <td>BUT Réseaux et Télécommunications</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Période :</strong></td>
-                            <td>2025 - Aujourd'hui</td>
-                        </tr>
+                        <tr><td><strong>Programme :</strong></td><td>BUT Réseaux et Télécommunications</td></tr>
+                        <tr><td><strong>Période :</strong></td><td>2025 - Aujourd'hui</td></tr>
                         <tr>
                             <td><strong>Description :</strong></td>
-                            <td>Cette formation me permet de consolider mes compétences en réseaux informatiques, télécommunications et systèmes numériques. Je développe des compétences techniques telles que la configuration de réseaux, l'administration de systèmes et les premiers concepts de cybersécurité.
-                                 Elle m'apporte également une méthodologie de travail rigoureuse, une capacité d'analyse accrue et une meilleure compréhension des enjeux de sécurité des infrastructures informatiques.
-                            </td>
+                            <td>Cette formation me permet de consolider mes compétences en réseaux informatiques, télécommunications et systèmes numériques. Je développe des compétences techniques telles que la configuration de réseaux, l'administration de systèmes et les premiers concepts de cybersécurité. Elle m'apporte également une méthodologie de travail rigoureuse, une capacité d'analyse accrue et une meilleure compréhension des enjeux de sécurité des infrastructures informatiques.</td>
                         </tr>
-                        <tr>
-                            <td><strong>Lieu :</strong></td>
-                            <td>Clermont-Ferrand, France</td>
-                        </tr>
+                        <tr><td><strong>Lieu :</strong></td><td>Clermont-Ferrand, France</td></tr>
                     </tbody>
                 </table>
                 <br>
                 <table class="card">
                     <thead>
-                        <tr>
-                            <th colspan="2">BACCALAURÉAT</th>
-                        </tr>
+                        <tr><th colspan="2">BACCALAURÉAT</th></tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><strong>Filière :</strong></td>
-                            <td>Général</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Période :</strong></td>
-                            <td>2022 - 2025</td>
-                        </tr>
+                        <tr><td><strong>Filière :</strong></td><td>Général</td></tr>
+                        <tr><td><strong>Période :</strong></td><td>2022 - 2025</td></tr>
                         <tr>
                             <td><strong>Description :</strong></td>
-                            <td>Titulaire d'un baccalauréat général, mention assez bien, avec les spécialités Mathématiques, Numérique et sciences de l'informatique et Physique-chimie.
-                                Cette formation m'a apporté des bases solides, en développant mon raisonnement logique et ma capacité à résoudre des problèmes complexes.
-                                Elle m'a également permis d'acquérir des premières compétences en programmation et en algorithmique, facilitant ainsi mon orientation vers les domaines des réseaux et de la cybersécurité.</td>
+                            <td>Titulaire d'un baccalauréat général, mention assez bien, avec les spécialités Mathématiques, Numérique et sciences de l'informatique et Physique-chimie. Cette formation m'a apporté des bases solides, en développant mon raisonnement logique et ma capacité à résoudre des problèmes complexes. Elle m'a également permis d'acquérir des premières compétences en programmation et en algorithmique, facilitant ainsi mon orientation vers les domaines des réseaux et de la cybersécurité.</td>
                         </tr>
-                        <tr>
-                            <td><strong>Lieu :</strong></td>
-                            <td>Orléans, Loiret, Centre-Val-de-Loire</td>
-                        </tr>
+                        <tr><td><strong>Lieu :</strong></td><td>Orléans, Loiret, Centre-Val-de-Loire</td></tr>
                     </tbody>
                 </table>
             </div>
         </section>
         
-        <!-- Experience -->
+        <!-- ===== CAROUSEL EXPÉRIENCES ===== -->
         <section id="experience">
             <br>
             <h2>EXPÉRIENCES</h2><br>
-            <div class="infoexperience">
-                <div class="experience-item card">
-                    <h3>Stage en boulangerie</h3>
-                    <p>
-                    Pendant la semaine du 14 au 23 février, j'ai effectué un stage dans une boulangerie où je m'occupais
-                    de la vente ainsi que de la gestion du site web.<br>
-                    Ce stage avait pour but d'aider ma famille ainsi que de développer mes compétences dans la gestion de la relation client.
-                    La gestion du site web se faisait de deux manières :
-                    <br>La première consistait à mettre à jour le site ainsi qu'à corriger d'éventuels bugs.<br>
-                    La seconde était la présentation du site web aux clients ainsi que leur formation à son utilisation.
-                    La moyenne d'âge étant élevée, tous n'avaient pas les connaissances nécessaires au fonctionnement d'un site web.
-                    <br><br>
-                    Ce stage m'a permis de développer mes compétences en communication et particulièrement dans la vulgarisation, ainsi que le contact client.
-                </p>
-                </div>
+            <div class="carousel-wrapper">
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="experience-track">
 
-                <div class="experience-item card">
-                    <h3>Création d'un site web – Projet collaboratif</h3>
-                    <p>
-                        En collaboration avec un infographiste, j'ai participé à la création du site web de la
-                        boulangerie <em>Le Pain d'Arpia</em>, fondée en 2025.
-                        <br><br>
-                        Le site a été développé à l'aide de la plateforme Odoo. Mon rôle consistait à assurer l'intégration
-                        technique et la mise en place d'un système de click-and-collect, tandis que l'infographiste s'occupait 
-                        du design et de l'interface utilisateur.
-                        <br><br>
-                        Ce projet m'a permis de développer des compétences en travail d'équipe, en gestion du temps et en
-                        organisation dans des délais courts.
-                    </p>
-                </div>
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide">
+                            <div class="card-with-image">
+                                <img src="image/IMG-20260120-WA00021.jpg" alt="Boulangerie pain d'arpia" class="card-image experience-img">
+                                <div class="card-content">
+                                    <h3>Vendeur en boulangerie</h3>
+                                    <p>
+                                        Depuis le 20 janvier 2026 je suis employé sur mes heures de disponibilités pour
+                                        m'occuper de la vente ainsi que la préparation des commandes de la boulangerie du pain d'Arpiat.<br>
+                                        Cet emploi consiste en deux principales tâches : la première étant l'accompagnement de la boulangère dans ses tâches 
+                                        quotidiennes telles que le ménage, la vaisselle, la préparation des commandes ainsi que les relevés de températures.
+                                        <br>La deuxième consistait en l'accueil des clients ainsi que la tenue de la boutique.
+                                        <br><br>
+                                        Ce travail m'a permis de développer mes compétences en communication lors de contact avec le client pour la vente de 
+                                        différents articles et l'appréciation de la boulangerie, mais a aussi permis de développer des techniques d'organisation 
+                                        pour faciliter le travail et gagner du temps lors des tâches ménagères.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div><!-- /carousel-track -->
+                </div><!-- /carousel-track-container -->
+
+                <!-- Contrôles -->
+                <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel('experience-track', -1)" aria-label="Précédent">&#8249;</button>
+                <button class="carousel-btn carousel-btn-next" onclick="moveCarousel('experience-track', 1)" aria-label="Suivant">&#8250;</button>
+                <div class="carousel-dots" id="experience-dots"></div>
             </div>
         </section>
-        
+
         <!-- Qualites -->
         <section id="qualites">
             <h2>QUALITÉS</h2>
-
             <div class="qualite">
                 <h3>Logique</h3>
-                <p>
-                    Je possède un raisonnement logique et structuré, me permettant d'analyser efficacement un problème
-                    avant de proposer une solution adaptée. J'aime comprendre le fonctionnement d'un système dans son
-                    ensemble afin d'en identifier les failles ou les points d'amélioration, que ce soit dans un contexte
-                    réseau, informatique ou organisationnel.
-                </p>
+                <p>Je possède un raisonnement logique et structuré, me permettant d'analyser efficacement un problème avant de proposer une solution adaptée. J'aime comprendre le fonctionnement d'un système dans son ensemble afin d'en identifier les failles ou les points d'amélioration, que ce soit dans un contexte réseau, informatique ou organisationnel.</p>
             </div>
-
             <div class="qualite">
                 <h3>Curiosité</h3>
-                <p>
-                    Naturellement curieux, je m'intéresse particulièrement aux domaines scientifiques et informatiques.
-                    Cette curiosité me pousse à effectuer des recherches personnelles, notamment autour de la cybersécurité
-                    et de la protection des données, afin d'approfondir mes connaissances au-delà du cadre scolaire.
-                </p>
+                <p>Naturellement curieux, je m'intéresse particulièrement aux domaines scientifiques et informatiques. Cette curiosité me pousse à effectuer des recherches personnelles, notamment autour de la cybersécurité et de la protection des données, afin d'approfondir mes connaissances au-delà du cadre scolaire.</p>
             </div>
-
             <div class="qualite">
                 <h3>Concentration</h3>
-                <p>
-                    La pratique du tir à l'arc m'a permis de développer une forte capacité de concentration et de maîtrise de soi.
-                    Je suis capable de rester focalisé sur une tâche pendant de longues périodes, ce qui me permet de travailler
-                    efficacement sur des projets techniques nécessitant rigueur et précision.
-                </p>
+                <p>La pratique du tir à l'arc m'a permis de développer une forte capacité de concentration et de maîtrise de soi. Je suis capable de rester focalisé sur une tâche pendant de longues périodes, ce qui me permet de travailler efficacement sur des projets techniques nécessitant rigueur et précision.</p>
+            </div>
+            <div class="qualite">
+                <h3>Adaptabilité </h3>
+                <p>J'ai développé cette qualité lors de mes différentes compétitions en e-sport. Celle-ci me permet de trouver des solutions et différentes alternatives lors de situation inconnue ou problématique.</p>
             </div>
         </section>
+
         <!-- Competences techniques -->
         <section id="competences" class="section">
             <div class="container">
                 <h2 class="section-title">COMPÉTENCES TECHNIQUES</h2>
-            <p class="skills-intro">
-                Tout au long de ma formation je dévellope différentes compétences technique.
-                Aujourd'hui je dispose de trois compétence en particulier: La ccréation de réseaux et de télécommunications,
-                la programmation et la communication.Toute ces compétences sont vouées à évoluer et de nouvelles vont aparaitre au fur et a mesurede mes études tel que la cybersécurité.
-            </p>
+                <p class="skills-intro">
+                    Tout au long de ma formation je développe différentes compétences techniques.
+                    Aujourd'hui je dispose de trois compétences en particulier : la création de réseaux et de télécommunications,
+                    la programmation et la communication. Toutes ces compétences sont vouées à évoluer et de nouvelles vont apparaître au fur et à mesure de mes études, telle que la cybersécurité.
+                </p>
+                <div class="skills-grid">
 
-            <div class="skills-grid">
-            <!-- Réseaux &amp; Télécommunications -->
-                <article class="skill-card">
-                    <div class="skill-header">
-                      <span class="skill-emoji" aria-hidden="true">📶</span>
-                      <h3>RÉSEAUX &amp; TÉLÉCOMMUNICATIONS</h3>
-                    </div>
-                    <ul>
-                      <li>Création de réseau avec configuration DNS,NAT .</li>
-                      <li>Création table de routage RIP.</li>
-                      <li>Mesurer et analyser les valeurs de tensions dans des circuits R-C.</li>
-                    </ul>
-                  </article>
-                
-              <!-- Programmation -->
-                  <article class="skill-card">
-                    <div class="skill-header">
-                      <span class="skill-emoji" aria-hidden="true">⚙️</span>
-                      <h3>PROGRAMMATION</h3>
-                    </div>
-                    <ul>
-                      <li>Scripts en Python et Shell Bash afin de facilité des taches.</li>
-                      <li>Développement web avec HTML / CSS / JavaScript pour des projets de portfolio.</li>
-                    </ul>
-                  </article>
-              <!-- Programmation -->
-                  <article class="skill-card">
-                    <div class="skill-header">
-                      <span class="skill-emoji" aria-hidden="true">💬</span>
-                      <h3>COMMUNICATION</h3>
-                    </div>
-                    <ul>
-                      <li>Vulgarisation du fonctionnement d'un réseau.</li>
-                      <li>Présentation oral.</li>
-                    </ul>
-                  </article>
+                    <!-- Réseaux -->
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-emoji" aria-hidden="true">🌐</span>
+                            <h3>RÉSEAUX</h3>
+                        </div>
+                        <ul>
+                            <li>Création de réseau avec configuration DNS et NAT.</li>
+                            <li>Création de tables de routage RIP.</li>
+                            <li>Administration et configuration de switches et routeurs.</li>
+                            <li>Analyse de trames réseau (Wireshark).</li>
+                        </ul>
+                    </article>
+
+                    <!-- Télécommunications -->
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-emoji" aria-hidden="true">📡</span>
+                            <h3>TÉLÉCOMMUNICATIONS</h3>
+                        </div>
+                        <ul>
+                            <li>Mesure et analyse des valeurs de tensions dans des circuits R-C.</li>
+                            <li>Compréhension des architectures de réseaux télécoms.</li>
+                            <li>Notions sur les modulations et transmissions de signaux.</li>
+                        </ul>
+                    </article>
+
+                    <!-- Téléphonie -->
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-emoji" aria-hidden="true">📞</span>
+                            <h3>TÉLÉPHONIE</h3>
+                        </div>
+                        <ul>
+                            <li>Notions sur les protocoles de signalisation SIP.</li>
+                            <li>Compréhension du fonctionnement de la VoIP.</li>
+                            <li>Bases de la configuration d'un IPBX.</li>
+                        </ul>
+                    </article>
+
+                    <!-- Programmation -->
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-emoji" aria-hidden="true">⚙️</span>
+                            <h3>PROGRAMMATION</h3>
+                        </div>
+                        <ul>
+                            <li>Scripts Python et Shell Bash pour l'automatisation de tâches.</li>
+                            <li>Développement web : HTML, CSS, JavaScript,PHP,SQL.</li>
+                            <li>Gestion de versions avec Git / GitHub.</li>
+                        </ul>
+                    </article>
+
+                    <!-- Communication -->
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-emoji" aria-hidden="true">💬</span>
+                            <h3>COMMUNICATION</h3>
+                        </div>
+                        <ul>
+                            <li>Vulgarisation du fonctionnement d'un réseau auprès d'un public non-technique.</li>
+                            <li>Présentation orale de projets techniques.</li>
+                            <li>Rédaction de comptes rendus et documentation.</li>
+                        </ul>
+                    </article>
+
+                </div>
             </div>
-          </div>
         </section>
 
-        <!-- Projets Section -->
+         <!-- ===== CAROUSEL PROJETS ===== -->
         <section id="projets">
             <h2>PROJETS</h2>
-
-            <!-- Projet 1 : Photométrie -->
-            <div class="card-with-image-stack">
-                <div class="card-images-vertical">
-                    <img src="image/réseaux1.png" alt="reseaux1" class="card-image">
-                    <img src="image/réseaux2.png" alt="reseau2" class="card-image">
+            <div class="carousel-wrapper">
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="projets-track">
+ 
+                        <!-- Slide 1 : Projet réseau -->
+                        <div class="carousel-slide">
+                            <div class="card-with-image-stack">
+                                <div class="card-images-vertical">
+                                    <img src="image/réseaux1.png" alt="reseaux1" class="card-image">
+                                    <img src="image/réseaux2.png" alt="reseau2" class="card-image">
+                                </div>
+                                <div class="card-content">
+                                    <h3>Projets réseaux et télécommunications</h3>
+                                    <h4>Introduction</h4>
+                                    <p>Dans le cadre de mes études, j'ai mené un projet de création de réseaux en collaboration avec deux camarades de promotion. Ce projet m'a permis de travailler en équipe afin d'avancer vers un objectif commun. Il m'a aussi permis de démontrer mes apprentissages au travers de la conception du réseau.</p>
+                                    <h4>Objectif</h4>
+                                    <p>Le but du projet était de créer un réseau selon certaines demandes d'une entreprise, telles que le respect des plans du cahier des charges. J'ai dû faire preuve de <strong>logique</strong> afin d'agencer de façon correcte le réseau et de le vulgariser lors d'une présentation orale. Cette démarche a renforcé ma capacité à travailler de manière organisée et en coordination avec mes camarades.</p>
+                                    <h4>Conclusion</h4>
+                                    <p>Cette expérience a enrichi ma capacité à communiquer avec mes camarades et lors d'une présentation. J'ai pu mettre à profit mes apprentissages lors des cours de création de réseaux et adapter mon vocabulaire de façon à ce que l'on puisse comprendre comment fonctionne un réseau. Elle a également prouvé que ma <strong>logique</strong> et ma <strong>capacité d'apprentissage</strong> vont m'apporter de la facilité dans mes futurs projets.</p>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <!-- Slide 2 : Portfolio -->
+                        <div class="carousel-slide">
+                            <div class="card-with-image">
+                                <img src="image/portfolioWeb.png" alt="Code HTML portfolio" class="card-image">
+                                <div class="card-content">
+                                    <h3>Création d'un portfolio hébergé sur GitHub</h3>
+                                    <h4>Introduction</h4>
+                                    <p>Lors de l'année 2025/2026, j'ai eu l'opportunité de créer un portfolio sous le format web. Celui-ci a pour but de démontrer mes compétences de développement avec des langages comme HTML et <strong>CSS</strong>. Ce projet m'a fait découvrir le site <strong>GitHub</strong>, un hébergeur de pages web gratuit et fournissant des connexions sécurisées.</p>
+                                    <h4>Objectif</h4>
+                                    <p>L'objectif est de réussir à me présenter sur internet de façon claire et détaillée tout en montrant que je suis capable de créer un site web stable et fonctionnel. Ce travail est plutôt complexe car la gestion du temps est difficile en vue des deadlines fournies ainsi que la gestion de la possibilité de le modifier facilement au fur et à mesure de mes études.</p>
+                                    <h4>Conclusion</h4>
+                                    <p>Ce projet m'a mis en difficulté au niveau des dates de rendus vu que j'ai plusieurs projets importants en même temps dont un autre site web et les différents partiels de l'IUT.</p>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <!-- Slide 3 : Projet 3 -->
+                        <div class="carousel-slide">
+                            <div class="card-with-image">
+                                <img src="image/VOTRE_IMAGE_3.png" alt="Projet Intégratif" class="card-image">
+                                <div class="card-content">
+                                    <h3>Projet Intégratif</h3>
+                                    <h4>Introduction</h4>
+                                    <p>Le projet intégratif est l'étape finale de la 1ère année du BUT Réseaux et Télécommunications.Celui-ci a pour but de tester toutes les compétences techniques acquises lors
+                                        de la première année. Celui-ci se déroule dans une équipe de 4 où la coordination est primordiale.
+                                    </p>
+                                    <h4>Objectif</h4>
+                                    <p>L'objectif est de créer un réseau à intégrer dans une petite entreprise, ainsi que de créer des solutions adaptées pour celle-ci telles que la mise en place d'applications 
+                                        Professionnel.Celui-ci à aussi pour but de nous former à des projets dans de futures entreprises en tant qu'alternant 
+                                    </p>
+                                    <h4>Conclusion</h4>
+                                    <p>A venir a la fin du projet.</p>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <!-- Slide 4 : Projet 4 -->
+                        <div class="carousel-slide">
+                            <div class="card-with-image">
+                                <img src="image/projet_SAE22.png" alt="SAE22" class="card-image">
+                                <div class="card-content">
+                                    <h3>SAE 22</h3>
+                                    <h4>Introduction</h4>
+                                    <p>Ce projet aborde les moyens de numérisation des signaux ainsi que leur compréhension à travers différents programmmes sous Mathlab</p>
+                                    <h4>Objectif</h4>
+                                    <p>L'objectif est donc la compréhension de la numérisation ainsi que la formation à un nouveau langage de programmation Mathlab
+                                        nous travaillons aussi par binôme afin de nous répartir les tâches et d'obtenir des connaissances plus diversifiées de par nos réfléxions
+                                        Le but final est d'obtenir plusieurs échantillons de signaux ainsi que des codes permettant de faciliter nos caluls en deuxième année
+                                    </p>
+                                    <h4>Conclusion</h4>
+                                    <p>A venir a la fin du projet.</p>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <!-- Slide 5 : Projet 5 -->
+                        <div class="carousel-slide">
+                            <div class="card-with-image">
+                                <img src="image/projet_SAE23.png" alt="SAE 23" class="card-image">
+                                <div class="card-content">
+                                    <h3>SAE 23</h3>
+                                    <h4>Introduction</h4>
+                                    <p>Ce projet consiste en la création d'un site web sous php avec une liaison vers une base de données.
+                                        Celui-ci se déroule tout seul et nous fait aussi aborder la base des politiques de sécurité.
+                                    </p>
+                                    <h4>Objectif</h4>
+                                    <p>L'objectif est l'application et la mise en pratique de toutes nos compétence en programmation web.
+                                        Celle-ci mobilise les compétences suivantes : html,css,php,javascript,mysql.
+                                        On aborde aussi les moyens de sécurisation des mots de passe ainsi que la réflexion sur la conception des bases de données.
+                                    </p>
+                                    <h4>Conclusion</h4>
+                                    <p>A venir a la fin du projet .</p>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <!-- Slide 6 : Projet 6 -->
+                        <div class="carousel-slide">
+                            <div class="card-with-image">
+                                <img src="image/projet_SAE21.png" alt="SAE 21" class="card-image">
+                                <div class="card-content">
+                                    <h3>SAE 21</h3>
+                                    <h4>Introduction</h4>
+                                    <p>Le projet porte ici sur la création de différentes structure internet tel que la création de vlan,de DHCPet de routage.</p>
+                                    <h4>Objectif</h4>
+                                    <p>Ici tout est fait séparément dans le but de nous former et de nous préparer au projet intégratif.
+                                        Chaque étape doit être minutieuse mais dans un seul but final commun l'accès à internet.
+                                        Le travail se fait aussi en binôme afin de mieux se coordonné et de trouver différentes variantes aux solutions de base
+                                    </p>
+                                    <h4>Conclusion</h4>
+                                    <p>A venir a la fin du projet</p>
+                                </div>
+                            </div>
+                        </div>
+ 
+                    </div><!-- /carousel-track -->
                 </div>
-                <div class="card-content">
-                    <h3>Projets réseaux et télécommunications</h3>
-                    
-                    <h4>Introduction</h4>
-                    <p>
-                        Dans le cadre de mes études, j'ai mené un projet de création de réseaux en collaboration avec deux camarades de promotion. 
-                        Ce projet m'a permis de travailler en équipe afin d'avancer vers un objectif commun. Il m'a aussi permis
-                        de démontrer mes apprentissages au travers de la conception du réseau.
-                    </p>
-                    
-                    <h4>Objectif</h4>
-                    <p>
-                        Le but du projet était de créer un réseau selon certaines demandes d'une entreprise, telles que le respect des plans du cahier des charges. 
-                        J'ai dû faire preuve de <strong>logique</strong> afin d'agencer de façon correcte le réseau et de le vulgariser lors d'une présentation orale. 
-                        Cette démarche a renforcé ma capacité à travailler de manière organisée et en coordination avec mes camarades.
-                    </p>
-                    
-                    <h4>Conclusion</h4>
-                    <p>
-                        Cette expérience a enrichi ma capacité à communiquer avec mes camarades et lors d'une présentation. J'ai pu mettre à profit mes apprentissages lors des cours de création de réseaux
-                        et adapter mon vocabulaire de façon à ce que l'on puisse comprendre comment fonctionne un réseau.
-                        Elle a également prouvé que ma <strong>logique</strong> et ma <strong>capacité d'apprentissage</strong> 
-                        vont m'apporter de la facilité dans mes futurs projets.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Projet 2 : Portfolio Web -->
-            <div class="card-with-image">
-                <img src="image/portfolioWeb.png" alt="Code HTML portfolio" class="card-image">
-                <div class="card-content">
-                    <h3>Création d'un portfolio hébergé sur GitHub</h3>
-                    
-                    <h4>Introduction</h4>
-                    <p>
-                        Lors de l'année 2025/2026, j'ai eu l'opportunité de créer un portfolio sous le format web. Celui-ci a pour but de démontrer 
-                        mes compétences de développement avec des langages comme HTML et <strong>CSS</strong>. Ce projet m'a fait découvrir le site 
-                        <strong>GitHub</strong>, un hébergeur de pages web gratuit et fournissant des connexions sécurisées.
-                    </p>
-                    
-                    <h4>Objectif</h4>
-                    <p>
-                        L'objectif est de réussir à me présenter sur internet de façon claire et détaillée tout en montrant que je suis capable de 
-                        créer un site web stable et fonctionnel. Ce travail est plutôt complexe car la gestion du temps est difficile en vue 
-                        des deadlines fournies ainsi que la gestion de la possibilité de le modifier facilement au fur et à mesure de mes études.
-                    </p>
-                    
-                    <h4>Conclusion</h4>
-                    <p>
-                        Ce projet m'a mis en difficulté au niveau des dates de rendus vu que j'ai plusieurs projets importants en même temps dont un 
-                        autre site web et les différents partiels de l'IUT.
-                    </p>
-                </div>
+ 
+                <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel('projets-track', -1)" aria-label="Précédent">&#8249;</button>
+                <button class="carousel-btn carousel-btn-next" onclick="moveCarousel('projets-track', 1)" aria-label="Suivant">&#8250;</button>
+                <div class="carousel-dots" id="projets-dots"></div>
             </div>
         </section>
 
-        <!-- Divers Section -->
+        <!-- ===== CAROUSEL DIVERS ===== -->
         <section id="divers">
             <h2>DIVERS</h2>
+            <div class="carousel-wrapper">
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="divers-track">
 
-            <!-- Tir à l'arc -->
-            <div class="card-with-image">
-                <img src="image/Tir_à_l'arc.jpg" alt="Tir à l'arc" class="card-image">
-                <div class="card-content">
-                    <h3>Tir à l'arc</h3>
-                    <p>
-                        Comme indiqué dans mes qualités, je suis un grand passionné de tir à l'arc. J'ai commencé à l'âge de 8 ans et j'ai participé 
-                        à plusieurs compétitions. Pour le moment, je suis à l'arrêt, mais je prévois de reprendre prochainement.
-                    </p>
-                    <p>
-                        Le tir à l'arc me permet de me décompresser et de me recentrer sur moi-même. Cette discipline m'a appris la patience, 
-                        la concentration et la maîtrise de soi, des qualités qui me sont très utiles dans mes études et projets professionnels.
-                    </p>
-                </div>
-            </div>
+                        <!-- Slide 1 : Tir à l'arc -->
+                        <div class="carousel-slide">
+                            <div class="card-with-image">
+                                <img src="image/Tir_à_l'arc.jpg" alt="Tir à l'arc" class="card-image">
+                                <div class="card-content">
+                                    <h3>Tir à l'arc</h3>
+                                    <p>Comme indiqué dans mes qualités, je suis un grand passionné de tir à l'arc. J'ai commencé à l'âge de 8 ans et j'ai participé à plusieurs compétitions. Pour le moment, je suis à l'arrêt, mais je prévois de reprendre prochainement.</p>
+                                    <p>Le tir à l'arc me permet de me décompresser et de me recentrer sur moi-même. Cette discipline m'a appris la patience, la concentration et la maîtrise de soi, des qualités qui me sont très utiles dans mes études et projets professionnels.</p>
+                                </div>
+                            </div>
+                        </div>
 
-            <!-- Jeux vidéo -->
-            <div class="card-with-image">
-                <img src="image/Top1MB.jpg" alt="Mobile Legends - Top 1" class="card-image">
-                <div class="card-content">
-                    <h3>Jeux vidéo</h3>
-                    <p>
-                        Je joue depuis mon plus jeune âge à tout type de jeux, tels que des MOBA, des RPG ou encore des Dark Souls. J'apprécie 
-                        particulièrement les jeux complexes, tant par leur style que par leur stratégie.
-                    </p>
-                    <p>
-                        J'ai d'ailleurs eu l'occasion d'être recruté dans une petite structure d'e-sport durant mes années de collège et de lycée. 
-                        Cette équipe était spécialisée dans les MOBA, notamment Mobile Legends. J'ai participé plusieurs fois à des tournois nationaux, 
-                        dont j'ai eu l'occasion d'en gagner deux. J'ai par la suite eu la possibilité de me classer parmi les meilleurs joueurs français 
-                        avec un personnage en particulier.
-                    </p>
+                        <!-- Slide 2 : Jeux vidéo -->
+                        <div class="carousel-slide">
+                            <div class="card-with-image">
+                                <img src="image/Top1MB.jpg" alt="Mobile Legends - Top 1" class="card-image">
+                                <div class="card-content">
+                                    <h3>Jeux vidéo</h3>
+                                    <p>Je joue depuis mon plus jeune âge à tout type de jeux, tels que des MOBA, des RPG ou encore des Dark Souls. J'apprécie particulièrement les jeux complexes, tant par leur style que par leur stratégie.</p>
+                                    <p>J'ai d'ailleurs eu l'occasion d'être recruté dans une petite structure d'e-sport durant mes années de collège et de lycée. Cette équipe était spécialisée dans les MOBA, notamment Mobile Legends. J'ai participé plusieurs fois à des tournois nationaux, dont j'ai eu l'occasion d'en gagner deux. J'ai par la suite eu la possibilité de me classer parmi les meilleurs joueurs français avec un personnage en particulier.</p>
+                                    <p>Cette expérience en équipe m’a permis de développer un très bon esprit d'équipe et une capacité d'analyse pour corriger les erreurs de mes partenaires et les miennes</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /carousel-track -->
                 </div>
+
+                <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel('divers-track', -1)" aria-label="Précédent">&#8249;</button>
+                <button class="carousel-btn carousel-btn-next" onclick="moveCarousel('divers-track', 1)" aria-label="Suivant">&#8250;</button>
+                <div class="carousel-dots" id="divers-dots"></div>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact">
             <h2>Contact et CV</h2>
-            <p>
-                Si vous souhaitez en savoir plus sur mon parcours ou échanger à propos d'une opportunité professionnelle,
-                je vous invite à consulter mon CV ou à me contacter via LinkedIn.
-            </p>
-            <!-- Lien LinkedIn -->
+            <p>Si vous souhaitez en savoir plus sur mon parcours ou échanger à propos d'une opportunité professionnelle, je vous invite à consulter mon CV ou à me contacter via LinkedIn.</p>
             <div class="socialnetworks">
-                <a href="https://www.linkedin.com/in/elliot-duverger-5597513a0/" target="_blank" 
-                   aria-label="Visitez mon profil LinkedIn">
+                <a href="https://www.linkedin.com/in/elliot-duverger-5597513a0" target="_blank" aria-label="Visitez mon profil LinkedIn">
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                     LinkedIn
                 </a>
             </div>
-            
-            <!-- Bouton de téléchargement CV -->
             <div class="cv-download">
                 <p>
                     <form action="image/CV_Elliot_Duverger.pdf" method="get">
@@ -364,10 +443,137 @@
     </main>
 
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('active');
-        }
+    /* =========================================================
+       MENU HAMBURGER
+    ========================================================= */
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+    }
+
+    /* =========================================================
+       CAROUSELS
+       Chaque section (experience, projets, divers) a son propre
+       carousel identifié par l'id de sa track.
+    ========================================================= */
+    const carouselState = {};
+
+    function initCarousel(trackId) {
+        const track    = document.getElementById(trackId);
+        const slides   = track.querySelectorAll('.carousel-slide');
+        const dotsId   = trackId.replace('-track', '-dots');
+        const dotsEl   = document.getElementById(dotsId);
+        const total    = slides.length;
+
+        carouselState[trackId] = { current: 0, total };
+
+        // Créer les points indicateurs
+        dotsEl.innerHTML = '';
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', `Slide ${i + 1}`);
+            dot.addEventListener('click', () => goToSlide(trackId, i));
+            dotsEl.appendChild(dot);
+        });
+
+        renderCarousel(trackId);
+    }
+
+    function renderCarousel(trackId) {
+        const { current } = carouselState[trackId];
+        const track  = document.getElementById(trackId);
+        const slides = track.querySelectorAll('.carousel-slide');
+        const dotsId = trackId.replace('-track', '-dots');
+        const dots   = document.querySelectorAll(`#${dotsId} .carousel-dot`);
+
+        // Déplacer la track
+        track.style.transform = `translateX(-${current * 100}%)`;
+
+        // Mettre à jour les points
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+
+        // Gérer visibilité des slides pour l'accessibilité
+        slides.forEach((s, i) => {
+            s.setAttribute('aria-hidden', i !== current);
+        });
+    }
+
+    function moveCarousel(trackId, direction) {
+        const state = carouselState[trackId];
+        state.current = (state.current + direction + state.total) % state.total;
+        renderCarousel(trackId);
+    }
+
+    function goToSlide(trackId, index) {
+        carouselState[trackId].current = index;
+        renderCarousel(trackId);
+    }
+
+    // Support swipe tactile
+    function addSwipeSupport(trackId) {
+        const container = document.getElementById(trackId).closest('.carousel-track-container');
+        let startX = 0;
+
+        container.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+        container.addEventListener('touchend', e => {
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) moveCarousel(trackId, diff > 0 ? 1 : -1);
+        }, { passive: true });
+    }
+
+    // Initialiser tous les carousels au chargement
+    document.addEventListener('DOMContentLoaded', () => {
+        ['experience-track', 'projets-track', 'divers-track'].forEach(id => {
+            initCarousel(id);
+            addSwipeSupport(id);
+        });
+        initTheme();
+    });
+
+    /* =========================================================
+       THEME SWITCHER
+       3 thèmes prédéfinis : default (flamme), dark (cyber), light (clair)
+    ========================================================= */
+    const THEME_KEY = 'portfolio-theme';
+
+    function initTheme() {
+        const saved = localStorage.getItem(THEME_KEY) || 'default';
+        applyTheme(saved, false);
+
+        // Bouton d'ouverture du panneau
+        document.getElementById('themeToggleBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            document.getElementById('themePanel').classList.toggle('open');
+        });
+
+        // Boutons de thème
+        document.querySelectorAll('.theme-option').forEach(btn => {
+            btn.addEventListener('click', () => {
+                applyTheme(btn.dataset.theme, true);
+                document.getElementById('themePanel').classList.remove('open');
+            });
+        });
+
+        // Fermer le panneau en cliquant ailleurs
+        document.addEventListener('click', () => {
+            document.getElementById('themePanel').classList.remove('open');
+        });
+    }
+
+    function applyTheme(theme, save) {
+        document.documentElement.setAttribute('data-theme', theme);
+        if (save) localStorage.setItem(THEME_KEY, theme);
+
+        // Marquer l'option active
+        document.querySelectorAll('.theme-option').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.theme === theme);
+        });
+
+        // Changer l'icône du bouton selon le thème
+        const icons = { default: '🔥', dark: '🌙', light: '☀️' };
+        document.querySelector('.theme-icon').textContent = icons[theme] || '🎨';
+    }
     </script>
 </body>
 </html>
